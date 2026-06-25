@@ -12,15 +12,4 @@ definitions (`msg db ...`), and `macro` / `struc` `{ ... }` bodies. Keyword
 [`queries/highlights.scm`](queries/highlights.scm) via `#match?` predicates, so
 those lists are easy to extend.
 
-## Development
-
-```sh
-tree-sitter generate   # regenerate src/parser.c from grammar.js
-tree-sitter test       # run the corpus in test/
-```
-
 Used by the [zed-fasm](https://github.com/kmschr/zed-fasm) Zed extension.
-
-## License
-
-[Unlicense](LICENSE) — public domain.
