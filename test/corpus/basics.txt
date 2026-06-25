@@ -1,0 +1,92 @@
+==================
+instruction with register and hex
+==================
+
+mov rax, 0x10
+
+---
+
+(source_file
+  (instruction
+    mnemonic: (identifier)
+    (register)
+    (number)))
+
+==================
+data definition and assignment
+==================
+
+msg db "hi", 0
+len = $ - msg
+
+---
+
+(source_file
+  (data_definition
+    name: (identifier)
+    directive: (data_directive)
+    (string)
+    (number))
+  (assignment
+    name: (identifier)
+    (current_address)
+    (operator)
+    (identifier)))
+
+==================
+macro with body
+==================
+
+macro write a, b
+{
+    mov rax, a
+}
+
+---
+
+(source_file
+  (macro_definition
+    keyword: (macro_keyword)
+    name: (identifier)
+    (identifier)
+    (identifier)
+    (block
+      (instruction
+        mnemonic: (identifier)
+        (register)
+        (identifier)))))
+
+==================
+label and segment directive
+==================
+
+start:
+segment readable executable
+
+---
+
+(source_file
+  (label
+    name: (identifier))
+  (instruction
+    mnemonic: (identifier)
+    (identifier)
+    (identifier)))
+
+==================
+comment and memory operand
+==================
+
+mov rax, [rbp - 8] ; load
+
+---
+
+(source_file
+  (instruction
+    mnemonic: (identifier)
+    (register)
+    (memory
+      (register)
+      (operator)
+      (number)))
+  (comment))

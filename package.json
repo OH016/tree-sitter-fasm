@@ -1,0 +1,21 @@
+{
+  "name": "tree-sitter-fasm",
+  "version": "0.1.0",
+  "description": "FASM (flat assembler) grammar for tree-sitter",
+  "license": "Unlicense",
+  "main": "bindings/node",
+  "dependencies": {
+    "node-addon-api": "^8.0.0",
+    "node-gyp-build": "^4.8.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.26.0"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.asm.fasm",
+      "file-types": ["asm", "fasm"],
+      "highlights": "queries/highlights.scm"
+    }
+  ]
+}

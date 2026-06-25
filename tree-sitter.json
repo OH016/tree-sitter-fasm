@@ -1,0 +1,18 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "fasm",
+      "camelcase": "Fasm",
+      "scope": "source.asm.fasm",
+      "file-types": ["asm", "fasm"],
+      "highlights": ["queries/highlights.scm"]
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "Unlicense",
+    "description": "FASM (flat assembler) grammar for tree-sitter",
+    "authors": [{ "name": "kmschr", "email": "kmschr@gmail.com" }]
+  }
+}
